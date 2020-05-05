@@ -43,20 +43,16 @@ public class SuccessfulGettingNews {
         param.put("pageSize", "3");
         param.put("page", "1");
 
-
         RequestSpecification request = setQueryParams(param);
         response = sendGETrequest(request);
     }
 
-    @After
-    public void finishTest(){
-        param.clear();
-        response =null;
-    }
 
     @Test
     public void statusCodeIs200() {
-        testMethods.checkStatusWithGiven(response, 200);
+        int actual = testMethods.getStatusCode(response);
+        Assert.assertEquals(200, actual);
+
     }
 
 
@@ -70,6 +66,7 @@ public class SuccessfulGettingNews {
 
 
     }
+
 
 
 }
