@@ -1,21 +1,23 @@
 package methods;
 
 import io.restassured.response.Response;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.junit.Assert;
 
 import java.util.List;
 
 public class TestMethods {
 
-    public void checkStatusWithGiven(Response response, int expectedStatus){
-        int actualStatus =  response.getStatusCode();
-        Assert.assertEquals(expectedStatus ,actualStatus);
+    List<String> list;
+
+    public int getStatusCode(Response response){
+       return response.getStatusCode();
     }
 
     public int checkAmountWithGivenParam(Response response, String path){
 
-        List<String> list = response.jsonPath().getList(path);
-
+        list = response.jsonPath().getList(path);
         return list.size();
 
     }
@@ -25,6 +27,9 @@ public class TestMethods {
         return response.jsonPath().getString(path);
 
     }
+
+
+
 
 
 }

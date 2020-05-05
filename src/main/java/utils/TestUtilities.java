@@ -5,6 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -17,7 +18,7 @@ public class TestUtilities {
     public static String apiKey ="fe8d0fb23729413ca5f8d6386e134b24";
     public static Response response ;
 
-    public static Map<String, String> param = new LinkedHashMap<String,String>();
+    public static  Map<String, String> param = new HashMap<String,String>();
 
     public static void setBaseURI (){
 
