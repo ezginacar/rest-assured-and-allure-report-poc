@@ -1,19 +1,14 @@
 package newsTest;
 
-import io.restassured.RestAssured;
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import methods.Helpers;
 import methods.TestMethods;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import utils.TestUtilities;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.logging.SocketHandler;
 
 import static java.lang.String.valueOf;
 import static utils.TestUtilities.*;
@@ -51,7 +46,7 @@ public class SuccessfulGettingNews {
     @Test
     public void statusCodeIs200() {
         int actual = testMethods.getStatusCode(response);
-        Assert.assertEquals(200, actual);
+        Assert.assertEquals(200,actual);
 
     }
 

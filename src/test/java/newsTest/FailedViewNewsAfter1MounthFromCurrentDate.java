@@ -1,17 +1,13 @@
 package newsTest;
 
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import methods.Helpers;
 import methods.TestMethods;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import utils.TestUtilities;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+
 
 import static utils.TestUtilities.*;
 
@@ -35,6 +31,8 @@ public class FailedViewNewsAfter1MounthFromCurrentDate  {
 
     @Before
     public void sendRequest(){
+
+
         //users
         setBaseURI();
         setBasePath(endpoint);
@@ -60,8 +58,10 @@ public class FailedViewNewsAfter1MounthFromCurrentDate  {
     @Test
     public void validateResponseMessage(){
        String actual= testMethods.gettingParamValue(response, "message");
-        Assert.assertEquals(meesage, actual);
+        Assert.assertSame(meesage,actual);
+
     }
+
 
 
 

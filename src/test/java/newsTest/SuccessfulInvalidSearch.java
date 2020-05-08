@@ -1,18 +1,21 @@
 package newsTest;
 
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import methods.Helpers;
 import methods.TestMethods;
-import org.junit.After;
+
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static utils.TestUtilities.*;
 import static utils.TestUtilities.param;
 
-public class FailedInvalidSearch {
+public class SuccessfulInvalidSearch {
 
     String endpoint = "/v2/everything";
 
@@ -46,6 +49,12 @@ public class FailedInvalidSearch {
     @Test
     public void statusCodeShouldNot200() {
         int status =testMethods.getStatusCode(response);
-        Assert.assertNotEquals(200, status);
+        Assert.assertEquals(200,status);
+    }
+
+    @Test
+    public void validateTotalSearchResult(){
+        String actualResult = testMethods.gettingParamValue(response,"totalResults");
+        Assert.assertEquals("0", actualResult);
     }
 }
