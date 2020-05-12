@@ -17,7 +17,7 @@ import static utils.TestUtilities.param;
 
 public class SuccessfulInvalidSearch {
 
-    String endpoint = "/v2/everything";
+    String path = "/v2/everything";
 
     Response response ;
 
@@ -29,7 +29,7 @@ public class SuccessfulInvalidSearch {
     public void sendRequest(){
 
         setBaseURI();
-        setBasePath(endpoint);
+        setBasePath(path);
         setContentType();
 
 
