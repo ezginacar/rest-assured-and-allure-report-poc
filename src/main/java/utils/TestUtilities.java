@@ -25,8 +25,8 @@ public class TestUtilities {
         RestAssured.baseURI = mainURL;
     }
 
-    public static void setBasePath(String endpoint) {
-        RestAssured.basePath = endpoint;
+    public static void setBasePath(String path) {
+        RestAssured.basePath = path;
     }
 
     public static void setContentType() {
