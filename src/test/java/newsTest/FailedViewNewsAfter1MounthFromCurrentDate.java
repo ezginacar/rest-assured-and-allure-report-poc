@@ -14,7 +14,7 @@ import static utils.TestUtilities.*;
 
 public class FailedViewNewsAfter1MounthFromCurrentDate  {
 
-    String endpoint = "/v2/everything";
+    String path = "/v2/everything";
 
 
 
@@ -35,7 +35,7 @@ public class FailedViewNewsAfter1MounthFromCurrentDate  {
 
         //users
         setBaseURI();
-        setBasePath(endpoint);
+        setBasePath(path);
         setContentType();
 
 
