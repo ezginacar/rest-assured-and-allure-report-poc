@@ -15,7 +15,7 @@ import static utils.TestUtilities.*;
 
 public class SuccessfulGettingNews {
 
-    String endpoint = "/v2/everything";
+    String path = "/v2/everything";
 
     Response response ;
 
@@ -27,7 +27,7 @@ public class SuccessfulGettingNews {
     public void sendRequest(){
 
         setBaseURI();
-        setBasePath(endpoint);
+        setBasePath(path);
         setContentType();
 
 
